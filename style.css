@@ -96,7 +96,7 @@ h1 {
 }
 
 .logo {
-  animation: moveLogoChar 1s 1.4s both;
+  animation: moveLogoChar 1.5s 2.2s both;
 }
 
 .logo:nth-child(-n + 4) {
@@ -136,36 +136,37 @@ h1 {
 .logo:nth-child(14) { --x: 50vw }
 
 .logo-arrow {
-  animation: moveLogoArrow 1s 1.2s both;
+  animation: moveLogoArrow 1.5s 2.2s both;
 }
 
 .logo-arrow__enter {
   --totalLength: 461.5;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-delay: .2s;
   animation-timing-function: linear;
 }
 
 .logo-arrow__under {
   --totalLength: 554;
-  animation-duration: 1s;
-  animation-delay: 1.2s;
+  animation-duration: 1.5s;
+  animation-delay: 2.2s;
 }
 
 .logo-arrow__right {
   --totalLength: 24;
-  animation-duration: 1s;
-  animation-delay: 1.2s;
+  animation-duration: 1.5s;
+  animation-delay: 2.2s;
 }
 
 .logo-arrow__triangle {
-  animation: fade .4s 2.1s both;
+  animation: fade .4s 3.6s both;
 }
 
 
 .global-navi ul {
   padding: 0;
   margin: 0;
+  animation: fade 1s 4.5s both;
 }
 
 .global-navi li {
