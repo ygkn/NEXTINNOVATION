@@ -136,7 +136,7 @@ h1 {
 .logo:nth-child(14) { --x: 50vw }
 
 .logo-arrow {
-  animation: moveLogoArrow 1.5s 2.2s both;
+  animation: moveLogoArrow 1.5s 2.1s both;
 }
 
 .logo-arrow__enter {
@@ -166,7 +166,7 @@ h1 {
 .global-navi ul {
   padding: 0;
   margin: 0;
-  animation: fade 1s 4.5s both;
+  animation: fade .5s 4s both;
 }
 
 .global-navi li {
