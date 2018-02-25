@@ -124,9 +124,9 @@ h1 {
 
 .logo:nth-child(1) { --x: -50vw }
 
-.logo:nth-child(2) { --x: -30vw }
+.logo:nth-child(2) { --x: -15vw }
 
-.logo:nth-child(3) { --x: 15vw }
+.logo:nth-child(3) { --x: 30vw }
 
 .logo:nth-child(4) { --x: 50vw }
 
@@ -134,21 +134,21 @@ h1 {
 
 .logo:nth-child(6) { --x: -40vw }
 
-.logo:nth-child(7) { --x: -30vw }
+.logo:nth-child(7) { --x: 30vw }
 
-.logo:nth-child(8) { --x: -20vw }
+.logo:nth-child(8) { --x: 20vw }
 
 .logo:nth-child(9) { --x: -10vw }
 
-.logo:nth-child(10) { --x: 10vw }
+.logo:nth-child(10) { --x: -10vw }
 
 .logo:nth-child(11) { --x: 20vw }
 
 .logo:nth-child(12) { --x: 30vw }
 
-.logo:nth-child(13) { --x: 40vw }
+.logo:nth-child(13) { --x: -40vw }
 
-.logo:nth-child(14) { --x: 50vw }
+.logo:nth-child(14) { --x: -50vw }
 
 .logo-arrow {
   animation: moveLogoArrow 1.5s 2.1s both;
