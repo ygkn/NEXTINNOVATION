@@ -18,6 +18,11 @@
   to { transform: translate(0) translate(-50%, -50%) }
 }
 
+@keyframes expand {
+  from { transform: translate(-50%, -50%) scale(0) }
+  to { transform: translate(-50%, -50%) scale(1) }
+}
+
 .anim-stroke {
   animation-name: stroke;
   stroke-dasharray: var(--totalLength);
@@ -78,9 +83,7 @@ header {
 }
 
 h1 {
-  background-color: #fff;
-  background-image: url(./main-bg.png);
-  background-position: center;
+  background: #fff url(./main-bg.png) center no-repeat;
   height: 580px;
   position: relative;
   overflow: hidden;
@@ -99,12 +102,24 @@ h1 {
   animation: moveLogoChar 1.5s 2.2s both;
 }
 
+/*
+
 .logo:nth-child(-n + 4) {
   --y: -300px;
 }
 
 .logo:nth-child(n + 4) {
   --y: 300px;
+}
+
+*/
+
+.logo:nth-child(2n) {
+  --y: -400px;
+}
+
+.logo:nth-child(2n + 1) {
+  --y: 400px
 }
 
 .logo:nth-child(1) { --x: -50vw }
@@ -149,13 +164,13 @@ h1 {
 .logo-arrow__under {
   --totalLength: 554;
   animation-duration: 1.5s;
-  animation-delay: 2.2s;
+  animation-delay: 2.3s;
 }
 
 .logo-arrow__right {
   --totalLength: 24;
   animation-duration: 1.5s;
-  animation-delay: 2.2s;
+  animation-delay: 2.3s;
 }
 
 .logo-arrow__triangle {
@@ -214,8 +229,66 @@ h1 {
   transform: translate(-50%, -50%) translate( 205px, 145px);
 }
 
+.modal-window {
+  width: 950px;
+  height: 580px;
+  z-index: 2;
+  background: #000;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  transition: 1s 1s;
+}
+
+.modal-background {
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal-window:target ~ .modal-background {
+  display: block;
+}
+
+.modal-background:before,
+.modal-background:after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: 950px;
+  height: 580px;
+  border: solid 1px #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+}
+
+.modal-window:target ~ .modal-background:before {
+  animation: expand .8s both;
+}
+
+.modal-window:target ~ .modal-background:after {
+  animation: expand .8s .3s both;  
+}
+
 footer {
   text-align: center;
   color: #fff;
-  padding: .5em;
+  line-height: 1rem;
+  font-size: .8em;
 }
